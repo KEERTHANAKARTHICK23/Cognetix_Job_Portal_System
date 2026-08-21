@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/dashboard/employer" element={<EmployerDashboard />} />
           <Route path="/dashboard/admin" element={<AdminDashboard />} />
         </Routes>
+        <SpeedInsights />
       </Router>
     </AuthProvider>
   );
